@@ -11,8 +11,8 @@ send a query to https://alibresco.github.io/static-dfa/div2/1/0/0/1 and it will 
 `success` or `failure` accordingly.</p>
 
 <h2>FAQ</h2>
-<h3>Can static webpages parse context free grammars? Are they Turing Complete?</h3>
-<p>Almost certainly not. It seems like there's not way to store anything 
+<h3>Can static webpages parse Context-Free Grammars? Are they Turing Complete?</h3>
+<p>Almost certainly not. It seems like there's no way to store anything 
 equivalent to a stack (or two in the case of TMs) as you traverse the symlinks,
 but I'm always open to new ideas.</p>
 <h3>Should I make a static webpage in production to parse regular expressions?</h3>
