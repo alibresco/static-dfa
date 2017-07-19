@@ -1,6 +1,6 @@
-# static-dfa
-## A proof by implementation that static webpages can parse a Type-3 regular grammar
-### https://alibresco.github.io/static-dfa
+<h1>static-dfa</h1>
+<h2>A proof by implementation that static webpages can parse a Type-3 regular grammar<h2>
+<h3>https://alibresco.github.io/static-dfa</h3>
 
 A fully function dfa engine using nothing but static webpages
 Specify your dfa in a .dfa file in the root directory (see examples),
