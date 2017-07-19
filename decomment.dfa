@@ -1,0 +1,45 @@
+# Determines whether or not a c program is commented correctly
+# By not specifying a language, this will use the default language 
+# of characters that work nicely in filenames and urls
+# Not that instead of /* signifying comments here, I use !* instead,
+# because file systems don't agree well with having files named /
+# As a result, it won't actually work on c programs
+# Welcome to the world of research cs
+
+STANDARD (accept)
+   !: MAYBE_COMMENT
+   ": S_LITERAL
+   ': C_LITERAL
+   other: STANDARD
+
+MAYBE_COMMENT (accept)
+   *: COMMENT
+   !: MAYBE_COMMENT
+   ": S_LITERAL
+   ': C_LITERAL
+   other: STANDARD
+
+COMMENT (reject)
+   *: MAYBE_OUT
+   other: COMMENT
+
+MAYBE_OUT (reject)
+   !: STANDARD
+   *: MAYBE_OUT
+   other: COMMENT
+
+S_LITERAL (accept)
+   ": STANDARD
+   \: S_ESCAPE
+   other: S_LITERAL
+
+S_ESCAPE (accept)
+   all: S_LITERAL
+
+C_LITERAL (accept)
+   ': STANDARD
+   \: C_ESCAPE
+   other: C_LITERAL
+
+C_ESCAPE (accept)
+   other: C_LITERAL

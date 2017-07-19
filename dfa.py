@@ -8,7 +8,7 @@ from subprocess import call
 
 PATH = None
 # default language
-LANGUAGE = list('1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm')
+LANGUAGE = list('1234567890qwertyuiopasdfghjklzxcvbnm"\'!@#$%^&*()-_=+')
 
 class State:
     # name: the name of the state

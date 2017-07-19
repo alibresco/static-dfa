@@ -1,4 +1,7 @@
 # Determines if a given string is a multiple of 2
+# First state is always start state
+# Remaining chars in language can be captured by making a input token `other`
+# If you break your filesystem with a crappy language, that's your fault
 
 LANGUAGE = [0, 1]
 
